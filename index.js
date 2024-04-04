@@ -5,6 +5,10 @@ var express = require('express');
 
 var app = express();
 
+
+const fs = require('fs');
+const path = require('path');
+
     //---------------------------------------
     //---- remove char limit ----
     //---------------------------------------
@@ -37,6 +41,55 @@ var app = express();
     app.use(express.static('site'));
     // app.use(express.static('stores_data'));
     // app.use('/stores_data', express.static('stores_data'));//express virtual path static folder methods, it provide fake path to static folder, meaning use() can replace with get()
+
+
+
+    app.post('/add_atendee', (req, res)=>{
+
+        console.log(req.body)
+
+        // return
+
+        function checkAndCreateAttendee(attendeeData, callback) {
+
+            const { name, surname, phone } = attendeeData;
+            const filename = `${name}_${phone}.json`;
+            const filePath = path.join(__dirname, 'attendees', filename);
+
+            fs.access(filePath, fs.constants.F_OK, (err) => {
+                if (err) {
+                    // File doesn't exist, create it
+                    const attendeeJson = JSON.stringify(attendeeData, null, 2);
+                    fs.writeFile(filePath, attendeeJson, (err) => {
+                        if (err) {
+                        callback(err);
+                        } else {
+                        callback(null, `Attendee created successfully: ${filename}`);
+                        }
+                    });
+                } 
+                else {
+                    // File exists, return error
+                    callback(new Error('Attendee already exists'), fs.readFileSync(filePath, 'utf8'));
+                }
+            });
+        }
+
+        const attendeeData = { name: req.body.name, surname: req.body.surname, phone: req.body.phone, date : Date.now()};
+
+        checkAndCreateAttendee(attendeeData, (err, message) => {
+        if (err) {
+            console.error(err.message, message);
+            res.jsonp({ result : 'error', data : JSON.parse(message)})
+        } else {
+            console.log(message);
+            res.jsonp({ result : 'success', data : {}})//record exist
+        }
+        });
+
+
+
+    });
 
 
     
