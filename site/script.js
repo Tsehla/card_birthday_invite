@@ -88,7 +88,9 @@ function countdownFromCurrentTime() {
                     updateTimeAndDate(); 
                     // alert("Countdown complete!");
                     // document.location.href='/main.html';
-                    window.open('/main.html','_self', "copyhistory=yes");
+                    // window.open('/main.html','_self', "copyhistory=yes");
+
+                    document.getElementById('next_page').click()
                 }, 2000)
                
             }, 3000)
