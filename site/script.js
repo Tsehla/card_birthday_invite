@@ -86,10 +86,7 @@ function countdownFromCurrentTime() {
                 document.body.querySelector('.clock').classList.toggle('off');
                 setTimeout(()=>{
                     updateTimeAndDate(); 
-                    document.body.querySelector('.clock').classList.toggle('off');
-                    // alert("Countdown complete!");
-                    // document.location.href='/main.html';
-                    // window.open('/main.html','_self', "copyhistory=yes");
+                    // document.body.querySelector('.clock').classList.toggle('off');
 
                     document.getElementById('next_page').click()
                 }, 2000)

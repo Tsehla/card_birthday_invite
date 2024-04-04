@@ -5,9 +5,185 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Birthday Inivitation</title>
+
+        <link rel="stylesheet" href="./bootstrap.min.css">
+        <link rel="stylesheet" href="./line-awesome/css/line-awesome-font-awesome.css">
+        <link rel="stylesheet" href="./w3.css"> <!-- w3css -->
+
+        <style>
+
+            @import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+
+            .major-mono{
+                font-family: "Major Mono Display", monospace;
+                /* font-weight: 400; */
+                /* font-style: normal; */
+            }
+
+
+            .julius-sans {
+                font-family: "Julius Sans One", sans-serif;
+                /* font-weight: 400; */
+                /* font-style: normal; */
+            }
+
+
+
+            .architects-daughter-regular {
+                font-family: "Architects Daughter", cursive;
+                /* font-weight: 400; */
+                /* font-style: normal; */
+            }
+
+
+            .container_card {
+                width: 90vw;
+                height: 90vh;
+                margin: 4.5vh auto 0;
+                /* border: 1px solid black; */
+            }
+
+            .top_container {
+                height: 45%;
+                width: 100%;
+                display: inline-block;
+            }
+
+            .top_container_h1_container {
+                width: 100%;
+                margin: 20px;
+                text-align: center;
+            }
+
+            .top_container_h1 {
+                font-size: 180%;
+                color: #3333FF;
+            }
+
+
+            .top_container_p_container {
+                width: 100%;
+                margin-top: 10px;
+                text-align: center;
+            }
+
+            .top_container_p_header {
+                font-size: 150%;
+                font-weight: 800;
+            }
+            .top_container_p {
+                width: 80%;
+                margin: 2px auto;
+
+            }
+
+            .top_container_p_span {
+                font-weight: 800;
+            }
+
+
+            /* bottom cont */
+            .bottom_container {
+                height: 45%;
+                width: 100%;
+                display: inline-block;
+            }
+
+
+            .bottom_container_line {
+                margin: 20px auto;
+                width: 80%;
+                height: 4px;
+                background-color: rgb(38, 9, 9);
+                border-radius: 50% 50% 50% 50%;
+            }
+            .bottom_container_form_contents {
+                width: 100%;
+                margin: 20px auto;
+            }
+
+            .bottom_container_form_contents input {
+                margin: 10px auto;
+            }
+
+            .radio_button_container {
+                width: 90%;
+                margin: 10px ;
+            }
+            .radio_button_container_checkbox {
+                width: auto;
+            }
+
+            .radio_button_container_checkbox_text {
+                font-weight: 800;
+            }
+
+        </style>
     </head>
 
     <body>
+
+
+        <!-- <div class="w3-container w3-card-4 container_card">  -->
+        <div class="w3-container container_card"> 
+
+            <!-- //top -->
+            <div class="top_container">
+
+                <div class="top_container_h1_container">
+                    <h1 class="top_container_h1 major-mono">BIRTHDAY INVITATION</h1>
+                </div>
+
+                <div class="top_container_p_container">
+                    <p class="top_container_p architects-daughter-regular">
+
+                        <div class="top_container_p_header julius-sans">You're</div>
+                        invited to a birthday bash that's gonna be legendary!  Get ready to unleash your inner party animal because <span class="top_container_p_span julius-sans">[Name]'s</span> turning [age] and it's going down on <span class="top_container_p_span julius-sans">[Date]</span> at <span class="top_container_p_span julius-sans">[Time]</span> at <span class="top_container_p_span julius-sans">[Location]</span>.
+                        <br>
+                        <br>
+                        There'll be [mention a fun activity or two, e.g., music that will make you move, laughter that will leave you breathless, cake that will melt your tastebuds].  It's not a birthday, it's an experience!  RSVP by [Date] so we can prepare for epicness. Don't miss out!
+                    </p>
+                </div>
+
+
+
+            </div>
+
+            <div class="bottom_container">
+
+                <div class="bottom_container_line"></div>
+
+                <div class="bottom_container_form_contents">
+
+                    <input type="text" title="name" placeholder=" Attendee Name" class="form-control">
+                    <input type="text" title="name" placeholder=" Attendee Surname" class="form-control">
+                    <input type="text" title="name" placeholder=" Attendee Contact" class="form-control">
+                    <input type="text" title="name" placeholder=" Attendee Prefered Drink/Alcohol" class="form-control">
+
+                    <div class="radio_button_container">
+                        <input type="checkbox" checked class="radio_button_container_checkbox"><span class="radio_button_container_checkbox_text">Attending</span>
+                    </div>
+
+                    <div class="radio_button_container">
+                        <input type="checkbox" class="radio_button_container_checkbox"><span class="radio_button_container_checkbox_text">With Partner</span>
+                    </div>
+
+
+
+                </div>
+
+
+
+
+
+            </div>
+
+
+
+        </div>
+
 
 
     </body>
