@@ -85,6 +85,7 @@ function countdownFromCurrentTime() {
             setTimeout(()=>{
                 document.body.querySelector('.clock').classList.toggle('off');
                 setTimeout(()=>{
+                    updateTimeAndDate(); 
                     // alert("Countdown complete!");
                     // document.location.href='/main.html';
                     window.open('/main.html','_self');
