@@ -37,6 +37,9 @@
                 /* font-style: normal; */
             }
 
+            body {
+                background-color: #ffffff;
+            }
 
             .container_card {
                 width: 90vw;
@@ -57,28 +60,30 @@
                 width: 100%;
                 display: inline-block;
             }
-
+            
             .top_container_h1_container {
                 width: 100%;
-                margin: 20px;
+                margin: 20px auto;
                 text-align: center;
             }
-
             .top_container_h1 {
                 font-size: 180%;
-                color: #3333FF;
+                color: #2196F3;
+                text-shadow: -1px -1px #020202;
             }
-
 
             .top_container_p_container {
                 width: 100%;
                 margin-top: 10px;
                 text-align: center;
+                font-size: 13px;
+                font-weight: 600;
+                color: #6e0680;
+                text-shadow: 0 1px #ffffffd1;
             }
-
             .top_container_p_header {
-                font-size: 150%;
-                font-weight: 800;
+                font-size: 182%;
+                font-weight: 900;
             }
             .top_container_p {
                 /* width: 80%; */
@@ -138,6 +143,22 @@
                 font-size: 16px;
             }
 
+            .confirm_button {
+                width: 80%;
+                margin: 20px auto;
+                font-weight: 800;
+                box-shadow: 12px 11px #0000002e;
+                text-shadow: -6px 5px black;
+            }
+
+            .confirm_button i {
+
+            }
+
+            .confirm_button span {
+
+            }
+
         </style>
     </head>
 
@@ -148,54 +169,61 @@
         <div class="w3-container w3-card container_card"> 
 
             <!-- //top -->
-            <div class="top_container">
+            <div class="w3-container">
 
-                <div class="top_container_h1_container">
-                    <h1 class="top_container_h1 major-mono">BIRTHDAY INVITATION</h1>
-                </div>
+                <div class="top_container">
 
-                <div class="top_container_p_container">
-                    <div class="top_container_p architects-daughter-regular">
-
-                        <div class="top_container_p_header julius-sans">You're</div>
-                        invited to a birthday bash that's gonna be legendary!  Get ready to unleash your inner party animal because <span class="top_container_p_span julius-sans">[Name]'s</span> turning [age] and it's going down on <span class="top_container_p_span julius-sans">[Date]</span> at <span class="top_container_p_span julius-sans">[Time]</span> at <span class="top_container_p_span julius-sans">[Location]</span>.
-                        <br>
-                        <br>
-                        There'll be [mention a fun activity or two, e.g., music that will make you move, laughter that will leave you breathless, cake that will melt your tastebuds].  It's not a birthday, it's an experience!  RSVP by [Date] so we can prepare for epicness. Don't miss out!
+                    <div class="top_container_h1_container">
+                        <h1 class="top_container_h1 major-mono">BIRTHDAY INVITATION</h1>
                     </div>
+
+                    <div class="top_container_p_container">
+                        <div class="top_container_p architects-daughter-regular">
+
+                            <div class="top_container_p_header julius-sans">You're</div>
+                            invited to a birthday bash that's gonna be legendary!  Get ready to unleash your inner party animal because <span class="top_container_p_span julius-sans">[Name]'s</span> turning [age] and it's going down on <span class="top_container_p_span julius-sans">[Date]</span> at <span class="top_container_p_span julius-sans">[Time]</span> at <span class="top_container_p_span julius-sans">[Location]</span>.
+                            <br>
+                            <br>
+                            There'll be [mention a fun activity or two, e.g., music that will make you move, laughter that will leave you breathless, cake that will melt your tastebuds].  It's not a birthday, it's an experience!  RSVP by [Date] so we can prepare for epicness. Don't miss out!
+                        </div>
+                    </div>
+
+
+
                 </div>
 
+                <div class="bottom_container">
 
+                    <div class="bottom_container_line"></div>
+
+                    <div class="bottom_container_form_contents">
+
+                        <input type="text" title="name" placeholder=" Attendee Name" class="form-control">
+                        <input type="text" title="name" placeholder=" Attendee Surname" class="form-control">
+                        <input type="text" title="name" placeholder=" Attendee Contact" class="form-control">
+                        <input type="text" title="name" placeholder=" Attendee Prefered Drink/Alcohol" class="form-control">
+
+                        <div class="radio_button_container">
+                            <input type="checkbox" checked class="radio_button_container_checkbox"><span class="radio_button_container_checkbox_text">Attending</span>
+                        </div>
+
+                        <div class="radio_button_container">
+                            <input type="checkbox" class="radio_button_container_checkbox"><span class="radio_button_container_checkbox_text">With Partner</span>
+                        </div>
+
+
+
+                    </div>
+
+
+
+
+
+                </div>
 
             </div>
-
-            <div class="bottom_container">
-
-                <div class="bottom_container_line"></div>
-
-                <div class="bottom_container_form_contents">
-
-                    <input type="text" title="name" placeholder=" Attendee Name" class="form-control">
-                    <input type="text" title="name" placeholder=" Attendee Surname" class="form-control">
-                    <input type="text" title="name" placeholder=" Attendee Contact" class="form-control">
-                    <input type="text" title="name" placeholder=" Attendee Prefered Drink/Alcohol" class="form-control">
-
-                    <div class="radio_button_container">
-                        <input type="checkbox" checked class="radio_button_container_checkbox"><span class="radio_button_container_checkbox_text">Attending</span>
-                    </div>
-
-                    <div class="radio_button_container">
-                        <input type="checkbox" class="radio_button_container_checkbox"><span class="radio_button_container_checkbox_text">With Partner</span>
-                    </div>
-
-
-
-                </div>
-
-
-
-
-
+            <div style="text-align: center;width: 100%;">
+                <button class="btn btn-primary confirm_button"><i class="la la-balloon"></i><span>I'm in</span></button>
             </div>
 
 
