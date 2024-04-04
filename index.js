@@ -9,6 +9,17 @@ var app = express();
 const fs = require('fs');
 const path = require('path');
 
+
+
+
+//create folders
+if (!fs.existsSync('./attendees')) {
+    
+    //sites
+    fs.mkdirSync('./attendees');
+
+}
+
     //---------------------------------------
     //---- remove char limit ----
     //---------------------------------------
