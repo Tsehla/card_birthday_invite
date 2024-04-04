@@ -52,8 +52,8 @@ const path = require('path');
 
         function checkAndCreateAttendee(attendeeData, callback) {
 
-            const { name, surname, phone } = attendeeData;
-            const filename = `${name}_${phone}.json`;
+            const { name, surname, contact, drink} = attendeeData;
+            const filename = `${name}_${contact}.json`;
             const filePath = path.join(__dirname, 'attendees', filename);
 
             fs.access(filePath, fs.constants.F_OK, (err) => {

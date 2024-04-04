@@ -47,23 +47,29 @@
 
 
             body {
-                background-color: #ffffff;
+                /* background-color: #ffffff; */
+                background: linear-gradient(45deg, black, #00000096);
             }
 
             .container_card {
                 width: 90vw;
-                /* height: 90vh; */
-                /* margin: 4.5vh auto 0; */
                 margin: 4.5vh auto 4.5% auto;
-                /* border: 1px solid black; */
+                /* background: linear-gradient(39deg, #1f00ff21, transparent);
+                background-image: url('./2078-ai.png');
+                background-size: 251%;
+                background-position: top;
+                background-repeat: no-repeat;
+                background-color: #2704040d; */
+                background-color: #ffffff;
+                max-width: 500px;
+            }
+            .container_card_2 {
                 background: linear-gradient(39deg, #1f00ff21, transparent);
                 background-image: url('./2078-ai.png');
                 background-size: 251%;
-                /* background-size: 100%; */
                 background-position: top;
                 background-repeat: no-repeat;
                 background-color: #2704040d;
-                max-width: 500px;
             }
 
             .top_container {
@@ -87,8 +93,8 @@
                 width: 100%;
                 margin-top: 10px;
                 text-align: center;
-                font-size: 15px;
-                font-weight: 600;
+                font-size: 17px;
+                /* font-weight: 600; */
                 color: #9C27B0;
                 /* text-shadow: 0 1px #ffffffd1; */
                 text-shadow: 0 1px #00000024;
@@ -389,67 +395,68 @@
 
 
         <!-- <div class="w3-container w3-card-4 container_card">  -->
-        <div class="w3-container w3-card container_card"> 
+        <div class=" w3-card container_card"> 
+            <div  class="container_card_2 w3-container" style="width: 100%;height: 100%;">
 
-            <!-- //top -->
-            <div class="w3-container">
+                <!-- //top -->
+                <div class="w3-container">
 
-                <div class="top_container">
+                    <div class="top_container">
 
-                    <div class="top_container_h1_container">
-                        <h1 class="top_container_h1 major-mono">BIRTHDAY INVITATION</h1>
-                    </div>
-
-                    <div class="top_container_p_container">
-                        <div class="top_container_p architects-daughter-regular .comfortaa-789987 ">
-
-                            <div class="top_container_p_header julius-sans">You're</div>
-                            invited to a birthday bash that's gonna be legendary!  Get ready to unleash your inner party animal because it's <span class="top_container_p_span julius-sans">going down</span> on <span class="top_container_p_span julius-sans">[Date]</span> at <span class="top_container_p_span julius-sans">[Location]</span>.
-                            <br>
-                            <br>
-                            There'll be fun activity or two, music that will make you move, laughter that will leave you breathless, cake that will melt your tastebuds.  It's not a birthday, it's an experience!  RSVP so we can prepare for epicness. Don't miss out!
+                        <div class="top_container_h1_container">
+                            <h1 class="top_container_h1 major-mono">BIRTHDAY INVITATION</h1>
                         </div>
+
+                        <div class="top_container_p_container">
+                            <div class="top_container_p architects-daughter-regular .comfortaa-789987 ">
+
+                                <div class="top_container_p_header julius-sans">You're</div>
+                                    <div id="text_id" style="min-height: 50px;">
+                                    
+                                    </div>
+                            </div>
+                        </div>
+
+
+
                     </div>
 
+                    <div class="bottom_container">
 
+                        <div class="bottom_container_line"></div>
+
+                        <div class="bottom_container_form_contents">
+
+                            <input id='name' type="text" title="name" placeholder=" Attendee Name" class="form-control">
+                            <input id='surname' type="text" title="surname" placeholder=" Attendee Surname" class="form-control">
+                            <input id='contact' type="text" title="contact" placeholder=" Attendee Contact" class="form-control">
+                            <input id='drink' type="text" title="drink" placeholder=" Attendee Prefered Drink/Alcohol" class="form-control">
+
+                            <div class="radio_button_container">
+                                <input id='attend' type="checkbox" checked class="radio_button_container_checkbox"><span class="radio_button_container_checkbox_text">Attending</span>
+                            </div>
+
+                            <div class="radio_button_container">
+                                <input id='partner' type="checkbox" class="radio_button_container_checkbox"><span class="radio_button_container_checkbox_text">With Partner</span>
+                            </div>
+
+
+
+                        </div>
+
+
+
+
+
+                    </div>
 
                 </div>
-
-                <div class="bottom_container">
-
-                    <div class="bottom_container_line"></div>
-
-                    <div class="bottom_container_form_contents">
-
-                        <input type="text" title="name" placeholder=" Attendee Name" class="form-control">
-                        <input type="text" title="name" placeholder=" Attendee Surname" class="form-control">
-                        <input type="text" title="name" placeholder=" Attendee Contact" class="form-control">
-                        <input type="text" title="name" placeholder=" Attendee Prefered Drink/Alcohol" class="form-control">
-
-                        <div class="radio_button_container">
-                            <input type="checkbox" checked class="radio_button_container_checkbox"><span class="radio_button_container_checkbox_text">Attending</span>
-                        </div>
-
-                        <div class="radio_button_container">
-                            <input type="checkbox" class="radio_button_container_checkbox"><span class="radio_button_container_checkbox_text">With Partner</span>
-                        </div>
-
-
-
-                    </div>
-
-
-
-
-
+                <div style="text-align: center;width: 100%;">
+                    <button id='subm_button' class="btn btn-primary confirm_button" onclick="do_save()"><i class="fa fa-birthday-cake"></i><span>I'm in</span></button>
                 </div>
 
-            </div>
-            <div style="text-align: center;width: 100%;">
-                <button class="btn btn-primary confirm_button" onclick="do_save()"><i class="fa fa-birthday-cake"></i><span>I'm in</span></button>
-            </div>
 
-
+            </div>
 
         </div>
 
@@ -465,8 +472,13 @@
 
         function load_hide(){
             setTimeout(()=>{
-                $('#loader_end').hide()
-            }, 3000)
+                $('#loader_end').hide();
+
+                setTimeout(()=>{
+                    typeWriter(textElement, text, typingSpeed, errorRate);
+                    // typeWriter(textElement, text, typingSpeed, errorRate, typoIndex);
+                }, 5000)
+            }, 5000)
         }
 
         $(document).ready(function(){
@@ -501,10 +513,26 @@
 
         function do_save(){
 
+
+            var name = document.getElementById('name').value;
+            var surname = document.getElementById('surname').value;
+            var contact = document.getElementById('contact').value;
+            var drink = document.getElementById('drink').value;
+            var attend = document.getElementById('attend').value;
+            var partner = document.getElementById('partner').value;
+
+            if(!name || !contact){
+
+                return alert('Please Fill all your details.');
+            }
+
             const attendeeData = {
-                name: 'John',
-                surname: 'Doe',
-                phone: '1234567890'
+                name: name,
+                surname: surname,
+                contact: contact,
+                drink : drink,
+                attend : attend,
+                partner : partner
             };
 
             addAttendee(attendeeData );
@@ -512,8 +540,74 @@
         }
 
 
+        function getRandomAlphabet() {
+            const allAlphabets = [...Array(26)].map((_, i) => String.fromCharCode(i + 97)).concat([...Array(26)].map((_, i) => String.fromCharCode(i + 65))).concat([...Array(10)].map((_, i) => String.fromCharCode(i + 48)));
+            const randomIndex = Math.floor(Math.random() * allAlphabets.length);
+            return allAlphabets[randomIndex];
+        }
 
 
+        function typeWriter(textElement, text, typingSpeed, errorRate) {
+
+            let currentIndex = 0;
+            let isBackspace = false;
+            let add_error_character = false;
+
+            const intervalId = setInterval(() => {
+
+                const currentChar = text[currentIndex];
+
+                if (Math.random() < errorRate && !isBackspace && !add_error_character && currentIndex > 10) {
+                    // Simulate a typo (backspace and retype)
+                    // isBackspace = true;
+                    // textElement.textContent = textElement.textContent.slice(0, -1);
+
+                    textElement.textContent += (currentChar + getRandomAlphabet()); 
+                    add_error_character = true;
+                }
+                else if(add_error_character){
+                    add_error_character = false;
+
+                    isBackspace = true;
+                    textElement.textContent = textElement.textContent.slice(0, -1); 
+                }
+
+                else if (isBackspace) {
+                    // Finish backspace and retype the correct character
+                    isBackspace = false;
+                    currentIndex = currentIndex -2;
+                } 
+
+                else {
+
+                    // String.fromCharCode(13)  //add space
+
+                    textElement.textContent += currentChar;
+                }
+
+                currentIndex++;
+
+                if (currentIndex === text.length) {
+                    
+                    clearInterval(intervalId);
+
+                    textElement.innerHTML = `
+                    invited to a birthday bash that's gonna be legendary!  Get ready to unleash your inner party animal because it's <span class="top_container_p_span julius-sans">going down</span> on <span class="top_container_p_span julius-sans">[Date]</span> at <span class="top_container_p_span julius-sans">[Location]</span>.<br><br>There'll be fun activity or two, music that will make you move, laughter that will leave you breathless, cake that will melt your tastebuds.  It's not a birthday, it's an experience!  RSVP so we can prepare for epicness. Don't miss out! 
+                    `;
+                }
+
+            }, typingSpeed);
+
+
+        }
+
+            // Example usage
+            const textElement = document.getElementById('text_id');
+            const text = `invited to a birthday bash that's gonna be legendary!  Get ready to unleash your inner party animal because it's going down on [Date] at [Location].\n\n\r\rThere'll be fun activity or two, music that will make you move, laughter that will leave you breathless, cake that will melt your tastebuds.  It's not a birthday, it's an experience!  RSVP so we can prepare for epicness. Don't miss out!`;
+            const typingSpeed = 200; // Milliseconds between characters
+            const errorRate = 0.05; // Probability of a typo
+
+            // typeWriter(textElement, text, typingSpeed, errorRate);
 
 
     </script>
