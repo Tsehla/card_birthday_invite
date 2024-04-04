@@ -75,7 +75,15 @@ const path = require('path');
             });
         }
 
-        const attendeeData = { name: req.body.name, surname: req.body.surname, phone: req.body.phone, date : Date.now()};
+        const attendeeData = { 
+            name: req.body.name, 
+            surname: req.body.surname, 
+            contact: req.body.contact, 
+            drink : req.body.drink,
+            attend : req.body.attend,
+            partner : req.body.partner,
+            date : Date.now()
+        };
 
         checkAndCreateAttendee(attendeeData, (err, message) => {
         if (err) {

@@ -368,11 +368,27 @@
                         transform:rotate(-180deg); 
                         opacity:0;
                     }
-                }
+            }
 
 
-
-
+            .help_container {
+                position: fixed;
+                bottom: 10vh;
+                right: 10vw;
+                z-index: 62;
+                /* background-color: darkgreen; */
+                background: linear-gradient(320deg, darkgreen, #673AB7);
+                border-radius: 50%;
+                width: 60px;
+                height: 60px;
+                border: 1px solid springgreen;
+                text-align: center;
+            }
+            .help_container_1 {
+                font-size: 60px;
+                line-height: 60px;
+                color: #9C27B0;
+            }
 
 
         </style>
@@ -458,9 +474,14 @@
 
             </div>
 
+            <div class="help_container">
+                <i class="fa fa-question-circle help_container_1" onclick="alert('Help!!!\n\nFor Event related enquiries, Please contact sender of Invitation.\n\nFor App/Site related issues Whatsapp : Tsehla, 067 090 9089')"></i>
+            </div>
+
         </div>
 
 
+  
 
 
     </body>
@@ -500,7 +521,7 @@
                 
                 if(data.result === 'error'){
 
-                    return alert(`Response for this name or user has been recorded already : \n Recorded response ::: \n\nAttendee : "${data.data.name} ${data.data.surname}"\nDrink : ""\nis Attending : ""\nWith Partner : ""`);
+                    return alert(`Response for this name or user has been recorded already : \n Recorded response ::: \n\nAttendee : "${data.data.name} ${data.data.surname}"\nDrink : "${data.data.drink}"\nis Attending : "${data.data.attend}"\nWith Partner : "${data.data.partner}"`);
                     
                 }
 
@@ -518,8 +539,8 @@
             var surname = document.getElementById('surname').value;
             var contact = document.getElementById('contact').value;
             var drink = document.getElementById('drink').value;
-            var attend = document.getElementById('attend').value;
-            var partner = document.getElementById('partner').value;
+            var attend = document.getElementById('attend').checked;
+            var partner = document.getElementById('partner').checked;
 
             if(!name || !contact){
 
@@ -592,7 +613,7 @@
                     clearInterval(intervalId);
 
                     textElement.innerHTML = `
-                    invited to a birthday bash that's gonna be legendary!  Get ready to unleash your inner party animal because it's <span class="top_container_p_span julius-sans">going down</span> on <span class="top_container_p_span julius-sans">[Date]</span> at <span class="top_container_p_span julius-sans">[Location]</span>.<br><br>There'll be fun activity or two, music that will make you move, laughter that will leave you breathless, cake that will melt your tastebuds.  It's not a birthday, it's an experience!  RSVP so we can prepare for epicness. Don't miss out! 
+                    invited to a birthday bash that's gonna be legendary!  Get ready to unleash your inner party animal because it's <span class="top_container_p_span julius-sans">going down</span> on <span class="top_container_p_span julius-sans">[Date : 13 April - 14 April]</span> at <span class="top_container_p_span julius-sans">[Location : Parys]</span> Bring Camping Gear, [Attire : All WHITE PARTY NEXT DAY].<br><br>There'll be fun activity or two, music that will make you move, laughter that will leave you breathless, cake that will melt your tastebuds.  It's not a birthday, it's an experience!  RSVP so we can prepare for epicness. Don't miss out! 
                     `;
                 }
 
@@ -601,13 +622,13 @@
 
         }
 
-            // Example usage
-            const textElement = document.getElementById('text_id');
-            const text = `invited to a birthday bash that's gonna be legendary!  Get ready to unleash your inner party animal because it's going down on [Date] at [Location].\n\n\r\rThere'll be fun activity or two, music that will make you move, laughter that will leave you breathless, cake that will melt your tastebuds.  It's not a birthday, it's an experience!  RSVP so we can prepare for epicness. Don't miss out!`;
-            const typingSpeed = 200; // Milliseconds between characters
-            const errorRate = 0.05; // Probability of a typo
+       
+        const textElement = document.getElementById('text_id');
+        const text = `invited to a birthday bash that's gonna be legendary!  Get ready to unleash your inner party animal because it's going down on [Date : 13 April - 14 April] at [Location : Parys] Bring Camping gear, [Attire : All WHITE PARTY NEXT DAY].\n\n\r\rThere'll be fun activity or two, music that will make you move, laughter that will leave you breathless, cake that will melt your tastebuds.  It's not a birthday, it's an experience!  RSVP so we can prepare for epicness. Don't miss out!`;
+        const typingSpeed = 200; // Milliseconds between characters
+        const errorRate = 0.05; // Probability of a typo
 
-            // typeWriter(textElement, text, typingSpeed, errorRate);
+  
 
 
     </script>
