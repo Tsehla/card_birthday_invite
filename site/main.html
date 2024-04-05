@@ -182,6 +182,10 @@
             }
 
 
+            .admin_panel {
+                font-size: 9px;
+                font-weight: 900;
+            }
 
             /* load busy */
 
@@ -412,6 +416,7 @@
 
         <!-- <div class="w3-container w3-card-4 container_card">  -->
         <div class=" w3-card container_card"> 
+
             <div  class="container_card_2 w3-container" style="width: 100%;height: 100%;">
 
                 <!-- //top -->
@@ -471,14 +476,14 @@
                     <button id='subm_button' class="btn btn-primary confirm_button" onclick="do_save()"><i class="fa fa-birthday-cake"></i><span>I'm in</span></button>
                 </div>
 
-
+                <a href="#" class='admin_panel' onclick="admin()">Admin Panel</a>
             </div>
 
             <div class="help_container">
                 <i class="fa fa-question-circle help_container_1" onclick="alert('Help!!!\n\nFor Event related enquiries, Please contact sender of Invitation.\n\nFor App/Site related issues Whatsapp : Tsehla, 067 090 9089')"></i>
             </div>
 
-        </div>
+   
 
 
   
@@ -490,6 +495,13 @@
     <script src="./jquery-3.3.1.min.js"></script>
 
     <script>
+
+        function admin(){
+
+            var input_ = prompt('Please enter Passkey to access dashboard.');
+            window.open('/attendees2?p='+input_, '_blank')
+
+        }
 
         function load_hide(){
             setTimeout(()=>{
@@ -539,8 +551,8 @@
             var surname = document.getElementById('surname').value;
             var contact = document.getElementById('contact').value;
             var drink = document.getElementById('drink').value;
-            var attend = document.getElementById('attend').checked;
-            var partner = document.getElementById('partner').checked;
+            var attend = document.getElementById('attend').checked?'yes':'no';
+            var partner = document.getElementById('partner').checked?'yes':'no';
 
             if(!name || !contact){
 
